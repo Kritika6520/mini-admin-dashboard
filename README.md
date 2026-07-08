@@ -123,6 +123,20 @@ npm run dev
 
 ---
 
+## Test Credentials
+
+Use the following admin account to access the dashboard:
+
+**Email**
+```
+admin@test.com
+```
+
+**Password**
+```
+admin123
+```
+---
 
 ## Future Improvements
 
