@@ -25,7 +25,7 @@ function Dashboard() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users");
+      const res = await axios.get("https://mini-admin-dashboard.onrender.com/api/users/");
       setUsers(res.data);
     } catch (err) {
       console.log(err);
@@ -50,7 +50,7 @@ if (!editId && password.length < 6) {
 }
   try {
     if (editId) {
-  await axios.put(`http://localhost:5000/api/users/${editId}`, {
+  await axios.put(`https://mini-admin-dashboard.onrender.com/api/users/${editId}`, {
     name,
     email,
     role,
@@ -58,7 +58,7 @@ if (!editId && password.length < 6) {
 
   setEditId(null);
 } else {
-  await axios.post("http://localhost:5000/api/users", {
+  await axios.post("https://mini-admin-dashboard.onrender.com/api/users/", {
     name,
     email,
     password,
@@ -85,7 +85,7 @@ const deleteUser = async (id) => {
   if (!confirmDelete) return;
 
   try {
-    await axios.delete(`http://localhost:5000/api/users/${id}`);
+    await axios.delete(`https://mini-admin-dashboard.onrender.com/api/users/${id}`);
     fetchUsers();
   } catch (err) {
     alert("Error deleting user");
