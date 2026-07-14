@@ -15,7 +15,7 @@ function Login() {
 }
     try {
       const res = await axios.post(
-        "https://mini-admin-dashboard.onrender.com/api/users/",
+        "https://mini-admin-dashboard.onrender.com/api/auth/login",
         {
           email,
           password,
